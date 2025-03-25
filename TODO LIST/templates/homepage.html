@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha uma Data</title>
+</head>
+<body>
+    <h1>Selecione uma Data</h1>
+
+    <!-- Formulário com um campo de data -->
+    <form action="{{ url_for('tarefas') }}" method="GET">
+        <input type="date" name="date" required>
+        <button type="submit">Ver Tarefas</button>
+    </form>
+</body>
+</html>
