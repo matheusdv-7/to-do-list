@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha uma Data</title>
-</head>
-<body>
-    <h1>Selecione uma Data</h1>
+{% extends "base.html" %}
 
-    <!-- Formulário com um campo de data -->
-    <form action="{{ url_for('tarefas') }}" method="GET">
-        <input type="date" name="date" required>
-        <button type="submit">Ver Tarefas</button>
+{% block title %}Escolha uma data{% endblock %}
+
+{% block content %}
+<section class="card task-card mx-auto p-4">
+    <h1 class="h3 mb-4">Selecione uma data</h1>
+
+    <form action="{{ url_for('tarefas') }}" method="get">
+        <label for="date" class="form-label">Data das tarefas</label>
+        <input type="date" id="date" name="date" class="form-control mb-3" required>
+        <button type="submit" class="btn btn-primary w-100">Ver tarefas</button>
     </form>
-</body>
-</html>
+</section>
+{% endblock %}
